@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" maxHeight="635.0" maxWidth="900.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="playlistControl">
+    <children>
+        <Rectangle fx:id="exitButton" arcHeight="5.0" arcWidth="5.0" fill="#f6eaea" height="562.0" layoutX="16.0" layoutY="57.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="869.0" />
+        <Circle fill="#ff1f1f" layoutX="875.0" layoutY="28.0" onMouseClicked="#stop" radius="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="maximise" fill="#ffd900" layoutX="849.0" layoutY="28.0" radius="9.0" stroke="#ffe100" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="minimise" fill="#01eb2c" layoutX="822.0" layoutY="28.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Label fx:id="winTitle" accessibleRole="IMAGE_VIEW" layoutX="48.0" layoutY="13.0" text="Music Player">
+            <font>
+                <Font name="Gotham-Bold" size="27.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop color="#ff5959" />
+                        <Stop color="#ff5959" offset="0.007662835249042145" />
+                        <Stop color="#8c8cff" offset="0.9961685823754789" />
+                        <Stop color="#8c8cff" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <ImageView fitHeight="31.0" fitWidth="36.0" layoutX="14.0" layoutY="13.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/icons8-music-192.png" />
+            </image>
+        </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="44.0" layoutX="30.0" layoutY="68.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/backbutton.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="406.0" layoutX="54.0" layoutY="196.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="250.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#0084ff" />
+                  <Stop color="#00ff92" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="406.0" layoutX="326.0" layoutY="196.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="250.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff0400" />
+                  <Stop color="#ff1fee" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="406.0" layoutX="599.0" layoutY="196.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="250.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ffde1f" />
+                  <Stop color="#ff1f1f" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="232.0" mnemonicParsing="false" onAction="#play1" style="-fx-background-color: #1DB954; -fx-background-radius: 30;">
+         <font>
+            <Font name="CircularStd-Bold" size="22.0" />
+         </font>
+         <graphic>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="PLAY" textAlignment="CENTER" wrappingWidth="78.60200119018555">
+               <font>
+                  <Font name="CircularStd-Bold" size="14.0" />
+               </font>
+            </Text>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="397.0" layoutY="232.0" mnemonicParsing="false" onAction="#play2" style="-fx-background-color: #1DB954; -fx-background-radius: 30;">
+         <font>
+            <Font name="CircularStd-Bold" size="22.0" />
+         </font>
+         <graphic>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="PLAY" textAlignment="CENTER" wrappingWidth="78.60200119018555">
+               <font>
+                  <Font name="CircularStd-Bold" size="14.0" />
+               </font>
+            </Text>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="676.0" layoutY="232.0" mnemonicParsing="false" onAction="#play3" style="-fx-background-color: #1DB954; -fx-background-radius: 30;">
+         <font>
+            <Font name="CircularStd-Bold" size="22.0" />
+         </font>
+         <graphic>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="PLAY" textAlignment="CENTER" wrappingWidth="78.60200119018555">
+               <font>
+                  <Font name="CircularStd-Bold" size="14.0" />
+               </font>
+            </Text>
+         </graphic>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="80.0" layoutY="296.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="79.0" layoutY="355.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="79.0" layoutY="415.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="80.0" layoutY="472.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="79.0" layoutY="531.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="350.0" layoutY="296.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="351.0" layoutY="355.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="352.0" layoutY="415.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="350.0" layoutY="472.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="350.0" layoutY="531.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="624.0" layoutY="296.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="624.0" layoutY="355.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="624.0" layoutY="415.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="624.0" layoutY="472.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="624.0" layoutY="531.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="200.0" />
+      <Text layoutX="116.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLAYLIST MENU">
+         <font>
+            <Font name="Gotham-Black" size="84.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.5428571428571429" startY="0.12380952380952381">
+               <stops>
+                  <Stop color="#4f4cff" />
+                  <Stop color="#4dff85" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+    </children>
+</AnchorPane>

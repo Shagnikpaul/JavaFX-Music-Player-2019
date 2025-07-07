@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" maxHeight="635.0" maxWidth="900.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="artistControl">
+   <children>
+      <Rectangle fx:id="exitButton" arcHeight="5.0" arcWidth="5.0" fill="#f6eaea" height="562.0" layoutX="16.0" layoutY="57.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="869.0" />
+      <Circle fill="#ff1f1f" layoutX="875.0" layoutY="28.0" onMouseClicked="#stop" radius="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="maximise" fill="#ffd900" layoutX="849.0" layoutY="28.0" radius="9.0" stroke="#ffe100" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="minimise" fill="#01eb2c" layoutX="822.0" layoutY="28.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Label fx:id="winTitle" accessibleRole="IMAGE_VIEW" layoutX="48.0" layoutY="13.0" text="Music Player">
+         <font>
+            <Font name="Gotham-Bold" size="27.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff5959" />
+                  <Stop color="#ff5959" offset="0.007662835249042145" />
+                  <Stop color="#8c8cff" offset="0.9961685823754789" />
+                  <Stop color="#8c8cff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="31.0" fitWidth="36.0" layoutX="14.0" layoutY="13.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icons8-music-192.png" />
+         </image>
+      </ImageView>
+      <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="57.0" prefHeight="562.0" prefWidth="869.0" vbarPolicy="NEVER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3200.0" prefWidth="865.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="31.0" layoutX="10.0" layoutY="11.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/backbutton.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="38.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARTIST MENU">
+                     <font>
+                        <Font name="Gotham-Black" size="110.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#b0d3ff" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+                  <Text layoutX="323.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 Artist Available.">
+                     <font>
+                        <Font name="Gotham-Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="530.0" layoutX="25.0" layoutY="241.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="820.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                     <fill>
+                        <LinearGradient endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#0032ff" />
+                              <Stop color="#00cdff" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <ImageView blendMode="MULTIPLY" fitHeight="534.0" fitWidth="570.0" layoutX="328.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/alanwalker.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="41.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alan Walker." wrappingWidth="325.57904052734375">
+                     <font>
+                        <Font name="Circular Black" size="53.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="38.0" layoutY="447.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1.     Faded" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b2" layoutX="38.0" layoutY="510.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2.     Darkside" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b5" layoutX="38.0" layoutY="576.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3.     Spectre" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b3" layoutX="38.0" layoutY="642.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4.     Diamond Heart" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b4" layoutX="37.0" layoutY="706.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5.     Ignite" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="530.0" layoutX="25.0" layoutY="832.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="820.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="#ff0087" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <ImageView blendMode="MULTIPLY" fitHeight="548.0" fitWidth="822.0" layoutX="72.0" layoutY="814.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/linkin.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="41.0" layoutY="893.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Linkin Park." wrappingWidth="325.57904052734375">
+                     <font>
+                        <Font name="Circular Black" size="53.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="b15" layoutX="38.0" layoutY="1038.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1.     In The End (Trap Remix)  " wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b13" layoutX="38.0" layoutY="1101.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2.     Burn it Down" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b14" layoutX="38.0" layoutY="1167.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3.     Castle of Glass" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b16" layoutX="38.0" layoutY="1233.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4.     New Divide" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b17" layoutX="37.0" layoutY="1297.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5.     Numb" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="530.0" layoutX="22.0" layoutY="1431.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="820.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                     <fill>
+                        <LinearGradient endX="0.8047619047619048" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#00ff57" />
+                              <Stop color="DEEPSKYBLUE" offset="0.007662835249042145" />
+                              <Stop color="#ff00d2" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <ImageView blendMode="OVERLAY" fitHeight="455.0" fitWidth="822.0" layoutX="21.0" layoutY="1506.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/imagine.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="37.0" layoutY="1497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imagine Dragons." wrappingWidth="496.57904052734375">
+                     <font>
+                        <Font name="Circular Black" size="53.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="b9" layoutX="35.0" layoutY="1637.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1.     Thunder " wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b7" layoutX="35.0" layoutY="1700.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2.     Believer" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b8" layoutX="35.0" layoutY="1766.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3.     Machine" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b10" layoutX="35.0" layoutY="1832.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4.     Whatever it Takes" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b11" layoutX="34.0" layoutY="1896.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5.     Who we Are" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="530.0" layoutX="25.0" layoutY="2025.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="820.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                     <fill>
+                        <LinearGradient endX="0.20000000000000007" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#00ff57" />
+                              <Stop color="#ff7f00" offset="0.007662835249042145" />
+                              <Stop color="#f1ff00" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <ImageView blendMode="OVERLAY" fitHeight="509.0" fitWidth="763.0" layoutX="228.0" layoutY="2046.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/thefatrat.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="40.0" layoutY="2091.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TheFatRat." wrappingWidth="496.57904052734375">
+                     <font>
+                        <Font name="Circular Black" size="53.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="b24" layoutX="38.0" layoutY="2231.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1.     Xenogenessis" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b21" layoutX="38.0" layoutY="2294.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2.     MAYDAY" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b22" layoutX="38.0" layoutY="2360.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3.     The Calling" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b20" layoutX="38.0" layoutY="2426.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4.     Fly Away (.ft Anjulie)" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b23" layoutX="37.0" layoutY="2490.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5.     Time Lapse" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="530.0" layoutX="25.0" layoutY="2613.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="820.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                     <fill>
+                        <LinearGradient endX="0.8952380952380953" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#00ff57" />
+                              <Stop color="RED" offset="0.007662835249042145" />
+                              <Stop color="#ff008a" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <ImageView blendMode="MULTIPLY" cache="true" fitHeight="574.0" fitWidth="523.0" layoutX="401.0" layoutY="2621.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/unlike%20pluto%20lit.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="40.0" layoutY="2679.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unlike Pluto." wrappingWidth="496.57904052734375">
+                     <font>
+                        <Font name="Circular Black" size="53.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="b32" layoutX="38.0" layoutY="2819.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1.     JOLT" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b27" layoutX="38.0" layoutY="2882.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2.     Closure (Year 09)" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b26" layoutX="38.0" layoutY="2948.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3.     Canada" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b30" layoutX="38.0" layoutY="3014.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4.     Worst in Me" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b28" layoutX="37.0" layoutY="3078.0" mnemonicParsing="false" onAction="#playFile" prefHeight="50.0" prefWidth="507.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                     <font>
+                        <Font name="CircularStd-Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5.     Dollar for your Sadness" wrappingWidth="475.12890625">
+                           <font>
+                              <Font name="CircularStd-Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

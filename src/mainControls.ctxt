@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=mainControls
+comment1.params=event
+comment1.target=void\ artistMenu(javafx.scene.input.MouseEvent)
+comment2.params=event
+comment2.target=void\ allSongsMenu(javafx.scene.input.MouseEvent)
+comment3.params=event
+comment3.target=void\ playlistMenu(javafx.scene.input.MouseEvent)
+comment4.params=event
+comment4.target=void\ customSongMenu(javafx.scene.input.MouseEvent)
+comment5.params=event
+comment5.target=void\ songControl(javafx.scene.input.MouseEvent)
+comment6.params=
+comment6.target=void\ stop()
+numComments=7

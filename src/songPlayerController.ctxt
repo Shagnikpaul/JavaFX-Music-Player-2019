@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=songPlayerController
+comment1.params=location\ resources
+comment1.target=void\ initialize(java.net.URL,\ java.util.ResourceBundle)
+comment2.params=event
+comment2.target=void\ addSong(javafx.event.ActionEvent)
+comment3.params=
+comment3.target=void\ autoPlay()
+comment4.params=event
+comment4.target=void\ previous(javafx.scene.input.MouseEvent)
+comment5.params=event
+comment5.target=void\ next(javafx.scene.input.MouseEvent)
+comment6.params=event
+comment6.target=void\ exit(javafx.scene.input.MouseEvent)
+comment7.params=event
+comment7.target=void\ back(javafx.scene.input.MouseEvent)
+comment8.params=event
+comment8.target=void\ playPause(javafx.scene.input.MouseEvent)
+numComments=9

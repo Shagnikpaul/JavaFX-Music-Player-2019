@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" maxHeight="635.0" maxWidth="900.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="allSongControl">
+    <children>
+        <Rectangle fx:id="exitButton" arcHeight="5.0" arcWidth="5.0" fill="#f6eaea" height="562.0" layoutX="16.0" layoutY="57.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="869.0" />
+        <Circle fill="#ff1f1f" layoutX="875.0" layoutY="28.0" onMouseClicked="#stop" radius="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="maximise" fill="#ffd900" layoutX="849.0" layoutY="28.0" radius="9.0" stroke="#ffe100" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="minimise" fill="#01eb2c" layoutX="822.0" layoutY="28.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Label fx:id="winTitle" accessibleRole="IMAGE_VIEW" layoutX="48.0" layoutY="13.0" text="Music Player">
+            <font>
+                <Font name="Gotham-Bold" size="27.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop color="#ff5959" />
+                        <Stop color="#ff5959" offset="0.007662835249042145" />
+                        <Stop color="#8c8cff" offset="0.9961685823754789" />
+                        <Stop color="#8c8cff" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <ImageView fitHeight="31.0" fitWidth="36.0" layoutX="14.0" layoutY="13.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/icons8-music-192.png" />
+            </image>
+        </ImageView>
+      <ScrollPane hbarPolicy="NEVER" layoutX="16.0" layoutY="57.0" prefHeight="562.0" prefWidth="869.0" vbarPolicy="ALWAYS" vvalue="1.0">
+        <content>
+          <AnchorPane fx:id="allpane" minHeight="0.0" minWidth="0.0" prefHeight="1300.0" prefWidth="866.0" stylesheets="@scrollpane.css">
+               <children>
+                  <Text layoutX="-9.0" layoutY="130.0" opacity="0.43" strokeType="OUTSIDE" strokeWidth="0.0" text="All Songs Menu" textAlignment="CENTER" wrappingWidth="869.0">
+                     <font>
+                        <Font name="Gotham-Bold" size="96.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.8761904761904762" startX="1.0">
+                           <stops>
+                              <Stop color="#007aff" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+                  <Button fx:id="b2" layoutX="439.0" layoutY="185.0" mnemonicParsing="false" onAction="#play" onMouseClicked="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b1" layoutX="31.0" layoutY="185.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b3" layoutX="31.0" layoutY="257.0" mnemonicParsing="false" onAction="#play" onMouseClicked="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b4" layoutX="439.0" layoutY="257.0" mnemonicParsing="false" onAction="#play" onMouseClicked="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b5" layoutX="31.0" layoutY="331.0" mnemonicParsing="false" onAction="#play" onMouseClicked="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b6" layoutX="439.0" layoutY="331.0" mnemonicParsing="false" onAction="#play" onMouseClicked="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b7" layoutX="31.0" layoutY="405.0" mnemonicParsing="false" onAction="#play" onMouseClicked="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b8" layoutX="439.0" layoutY="405.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b9" layoutX="31.0" layoutY="480.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b10" layoutX="439.0" layoutY="480.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b11" layoutX="31.0" layoutY="554.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b12" layoutX="439.0" layoutY="554.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b13" layoutX="31.0" layoutY="627.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b14" layoutX="439.0" layoutY="627.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b15" layoutX="31.0" layoutY="700.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b16" layoutX="439.0" layoutY="700.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b17" layoutX="31.0" layoutY="772.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b18" layoutX="439.0" layoutY="772.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b19" layoutX="31.0" layoutY="845.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b20" layoutX="439.0" layoutY="845.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b21" layoutX="31.0" layoutY="915.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b22" layoutX="439.0" layoutY="918.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b23" layoutX="31.0" layoutY="990.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b24" layoutX="439.0" layoutY="990.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b25" layoutX="31.0" layoutY="1062.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b26" layoutX="439.0" layoutY="1062.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b27" layoutX="31.0" layoutY="1132.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b28" layoutX="439.0" layoutY="1132.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b29" layoutX="31.0" layoutY="1202.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Button fx:id="b30" layoutX="439.0" layoutY="1202.0" mnemonicParsing="false" onAction="#play" prefHeight="58.0" prefWidth="394.0" stylesheets="@buttons.css" />
+                  <Text layoutX="247.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose any one from the list below." textAlignment="CENTER" wrappingWidth="409.1200256347656">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="31.0" fitWidth="44.0" layoutX="7.0" layoutY="8.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/backbutton.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="42.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALONE">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="456.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alan Walker">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="452.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Darkside">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="452.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ignite">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="41.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diamond Heart">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="45.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Spectre">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="458.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We Are Alive">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="52.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Believer">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="452.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="1156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Closure">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="48.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thunder">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="42.0" layoutY="1087.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Superhero">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="452.0" layoutY="1157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dollar For Your Sadness">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="48.0" layoutY="1230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Playground">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="452.0" layoutY="1231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Worst In Me">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="452.0" layoutY="1087.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Canada">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="458.0" layoutY="870.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fly Away">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="42.0" layoutY="1015.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Lapse">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="454.0" layoutY="1014.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xenogenesis">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="48.0" layoutY="870.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PUBG Theme">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="452.0" layoutY="797.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What I've Done">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="52.0" layoutY="942.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MayDay">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="452.0" layoutY="943.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Calling">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="582.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Who we are">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="458.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Whatever It Takes">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="452.0" layoutY="656.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Castle Of Glass">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="451.0" layoutY="576.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Legends Never Die">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="48.0" layoutY="656.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Burn It Down">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="45.0" layoutY="736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In the End">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="452.0" layoutY="725.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Divide">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="45.0" layoutY="797.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numb">
+                     <font>
+                        <Font name="Gotham-Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="41.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alan Walker">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="41.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alan Walker">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="448.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alan Walker" wrappingWidth="107.19800567626953">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="454.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AL'sic &amp; San Cross">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="48.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imagine Dragons">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="454.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imagine Dragons">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="456.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imagine Dragons">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="54.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imagine Dragons">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="454.0" layoutY="601.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alan Walker">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="448.0" layoutY="745.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Linkin Park">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="672.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Linkin Park">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="454.0" layoutY="672.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alan Walker">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="602.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imagine Dragons">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="41.0" layoutY="752.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Linkin Park">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="45.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alan Walker">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="818.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Linkin Park">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="892.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="456.0" layoutY="892.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TheFatRat">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="48.0" layoutY="958.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TheFatRat">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="1035.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TheFatRat">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="454.0" layoutY="963.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TheFatRat">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="456.0" layoutY="1034.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TheFatRat">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="454.0" layoutY="818.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Linkin Park">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="48.0" layoutY="1247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unlike Pluto">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="448.0" layoutY="1177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unlike Pluto">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="454.0" layoutY="1108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unlike Pluto">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="48.0" layoutY="1177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unlike Pluto">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="41.0" layoutY="1108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unknown Brain">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="454.0" layoutY="1247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zelda">
+                     <font>
+                        <Font name="Gotham-Bold" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>

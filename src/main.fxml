@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="635.0" maxWidth="900.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainControls">
+   <children>
+      <Rectangle fx:id="exitButton" arcHeight="5.0" arcWidth="5.0" fill="#f6eaea" height="562.0" layoutX="16.0" layoutY="57.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="869.0" />
+      <Circle fill="#ff1f1f" layoutX="875.0" layoutY="28.0" onMouseClicked="#stop" radius="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="maximise" fill="#ffd900" layoutX="849.0" layoutY="28.0" radius="9.0" stroke="#ffe100" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="minimise" fill="#01eb2c" layoutX="822.0" layoutY="28.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Label fx:id="winTitle" accessibleRole="IMAGE_VIEW" layoutX="48.0" layoutY="13.0" text="Music Player">
+         <font>
+            <Font name="Gotham-Bold" size="27.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff5959" />
+                  <Stop color="#ff5959" offset="0.007662835249042145" />
+                  <Stop color="#8c8cff" offset="0.9961685823754789" />
+                  <Stop color="#8c8cff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="31.0" fitWidth="36.0" layoutX="14.0" layoutY="13.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icons8-music-192.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="allButton" fitHeight="207.0" fitWidth="200.0" layoutX="36.0" layoutY="76.0" onMouseClicked="#allSongsMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/redButton.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="artButton" fitHeight="200.0" fitWidth="200.0" layoutX="247.0" layoutY="76.0" onMouseClicked="#artistMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/redButton.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="listButton" fitHeight="200.0" fitWidth="200.0" layoutX="460.0" layoutY="76.0" onMouseClicked="#playlistMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/redButton.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cusButton" fitHeight="209.0" fitWidth="200.0" layoutX="670.0" layoutY="76.0" onMouseClicked="#customSongMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/redButton.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="infoButton" fitHeight="200.0" fitWidth="200.0" layoutX="352.0" layoutY="349.0" onMouseClicked="#songControl" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/redButton.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="75.0" layoutY="278.0" text="All Songs Menu" textAlignment="CENTER">
+         <font>
+            <Font name="Gotham-Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#434242" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="308.0" layoutY="278.0" text="Artist Menu">
+         <font>
+            <Font name="Gotham-Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#434242" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="510.0" layoutY="278.0" text="Playlist Menu">
+         <font>
+            <Font name="Gotham-Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#363636" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="719.0" layoutY="278.0" text="Custom Song" textAlignment="CENTER">
+         <font>
+            <Font name="Gotham-Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#363636" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="417.0" layoutY="558.0" text="About Us">
+         <font>
+            <Font name="Gotham-Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#434242" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>

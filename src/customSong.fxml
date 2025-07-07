@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="635.0" maxWidth="900.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customSongControl">
+    <children>
+        <Rectangle fx:id="exitButton" arcHeight="5.0" arcWidth="5.0" fill="#f6eaea" height="562.0" layoutX="14.0" layoutY="57.0" stroke="BLACK" strokeWidth="0.0" width="869.0" />
+        <Circle fill="#ff1f1f" layoutX="875.0" layoutY="28.0" onMouseClicked="#stop" radius="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="maximise" fill="#ffd900" layoutX="849.0" layoutY="28.0" radius="9.0" stroke="#ffe100" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="minimise" fill="#01eb2c" layoutX="822.0" layoutY="28.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Label fx:id="winTitle" accessibleRole="IMAGE_VIEW" layoutX="48.0" layoutY="13.0" text="Music Player">
+            <font>
+                <Font name="Gotham-Bold" size="27.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop color="#ff5959" />
+                        <Stop color="#ff5959" offset="0.007662835249042145" />
+                        <Stop color="#8c8cff" offset="0.9961685823754789" />
+                        <Stop color="#8c8cff" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <ImageView fitHeight="31.0" fitWidth="36.0" layoutX="14.0" layoutY="13.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/icons8-music-192.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="274.0" layoutY="106.0" prefHeight="42.0" prefWidth="340.0" text="Choose a MP3 File." textAlignment="CENTER">
+            <font>
+                <Font name="Gotham-Bold" size="35.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#434242" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+      <ImageView fitHeight="31.0" fitWidth="50.0" layoutX="24.0" layoutY="67.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/backbutton.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f9fbfc" height="60.0" layoutX="178.0" layoutY="201.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 70; -fx-arc-width: 70;" width="556.0" />
+      <Label fx:id="directory" layoutX="202.0" layoutY="220.0" prefHeight="22.0" prefWidth="508.0" text="File Directory.">
+         <font>
+            <Font name="Gotham-MediumItalic" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" layoutX="199.0" layoutY="478.0" prefHeight="22.0" prefWidth="489.0" textAlignment="CENTER">
+         <font>
+            <Font name="Gotham-Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="chooseButton" layoutX="367.0" layoutY="288.0" mnemonicParsing="false" onAction="#FileChoose" style="-fx-background-color: #000000; -fx-background-radius: 10;" text="Choose a File" textFill="WHITE">
+         <font>
+            <Font name="CircularStd-Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button ellipsisString="0" layoutX="393.0" layoutY="360.0" mnemonicParsing="false" onAction="#play" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #14f571; -fx-background-radius: 20;" text="PLAY">
+         <font>
+            <Font name="Circular Black" size="17.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

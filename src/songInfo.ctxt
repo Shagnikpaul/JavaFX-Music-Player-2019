@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=songInfo
+comment1.params=id
+comment1.target=java.io.File\ songFile(java.lang.String)
+comment2.params=filePath\ location
+comment2.target=java.lang.String\ musicName(java.lang.String,\ java.lang.String)
+comment3.params=filePath\ location
+comment3.target=java.lang.String\ artistName(java.lang.String,\ java.lang.String)
+comment4.params=FilePath
+comment4.target=java.io.File\ artistAlbum(java.lang.String)
+numComments=5

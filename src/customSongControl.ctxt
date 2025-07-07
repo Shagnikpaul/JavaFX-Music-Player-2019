@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=customSongControl
+comment1.params=event
+comment1.target=void\ stop(javafx.scene.input.MouseEvent)
+comment2.params=event
+comment2.target=void\ FileChoose(javafx.event.ActionEvent)
+comment3.params=event
+comment3.target=void\ back(javafx.scene.input.MouseEvent)
+comment4.params=event
+comment4.target=void\ play(javafx.event.ActionEvent)
+numComments=5

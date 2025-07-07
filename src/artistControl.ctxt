@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=artistControl
+comment1.params=event
+comment1.target=void\ stop(javafx.scene.input.MouseEvent)
+comment2.params=event
+comment2.target=void\ back(javafx.scene.input.MouseEvent)
+comment3.params=event
+comment3.target=void\ playFile(javafx.event.ActionEvent)
+numComments=4
